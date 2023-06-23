@@ -1,0 +1,437 @@
+/*
+
+  TYPOGRAPHY
+
+    color: #555
+
+    font-family:
+      - Montserrat
+      - JetBrains Mono (time span only)
+
+    font-size:
+      - 18px (default)
+      - 24px
+      - 32px (h1 only)
+      - 96px
+
+    font-weight:
+      - 400 (default)
+      - 500
+
+    line-height:
+      - 1.2 (default)
+      - 1
+
+  SHADOWS
+
+    box-shadow:
+      - 0 0 10px 2px rgba(0, 0, 0, 0.07);
+      - 0 0 10px 1px rgba(0, 0, 0, 0.07);
+
+  COLORS
+
+    #ffec99
+    #fff3bf
+    #fab005
+    #fff
+    #555
+    #333
+    #55555540
+    #33333399
+
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*:focus {
+  outline: none;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body,
+h1,
+h2,
+h3,
+h4 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 1.8rem;
+  line-height: 1.2;
+  color: #555;
+}
+
+body {
+  background-color: #ffec99;
+}
+
+ul {
+  list-style: none;
+}
+
+/* REUSABLE */
+
+.section-title {
+  font-size: 2.4rem;
+  font-weight: 500;
+}
+
+.section-content {
+  padding: 3.2rem 4rem;
+  border-radius: 6px;
+  background-color: #fff3bf;
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.07);
+}
+
+.button {
+  border: none;
+  border-radius: 4px;
+  padding: 0.8rem 1.2rem;
+  color: inherit;
+  font-size: 1.6rem;
+  font-weight: 500;
+  font-family: inherit;
+  background: none;
+  cursor: pointer;
+}
+
+/* HEADER */
+
+.header {
+  margin-bottom: 4.8rem;
+}
+
+.container-header {
+  max-width: 120rem;
+  margin: 0 auto;
+
+  padding: 4.8rem 0 1.8rem;
+  border-bottom: 1px solid #55555540;
+}
+
+.header__title {
+  font-size: 3.2rem;
+  font-weight: 500;
+}
+
+/* MAIN */
+
+.container-main {
+  max-width: 96rem;
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns: 54% 46%;
+  align-items: start;
+  gap: 4.8rem;
+}
+
+/* TIMER */
+
+.section-timer {
+  display: flex;
+
+  flex-direction: column;
+  gap: 1.8rem;
+}
+
+.timer-content {
+  display: flex;
+
+  flex-direction: column;
+  align-items: center;
+  gap: 2.4rem;
+}
+
+.timer__buttons-top {
+  display: flex;
+
+  justify-content: center;
+  gap: 1.6rem;
+
+  padding-bottom: 1.8rem;
+}
+
+.timer__buttons-top button {
+  width: 12.8rem;
+}
+
+.timer__buttons-top button.active-top {
+  color: #333;
+  background-color: #fab005;
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.07);
+}
+
+.timer__description {
+  text-align: center;
+
+  display: flex;
+
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.description__number {
+  color: #33333399;
+}
+
+.timer__time {
+  padding-bottom: 1.8rem;
+}
+
+.time {
+  display: block;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9.6rem;
+  line-height: 1;
+}
+
+.timer__buttons-bottom {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+  gap: 3.2rem;
+}
+
+.timer__buttons-bottom .start-button,
+.timer__buttons-bottom .pause-button {
+  text-transform: uppercase;
+  width: 12rem;
+  color: #333;
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.07);
+
+  transition: all 250ms;
+}
+
+.timer__buttons-bottom .start-button {
+  background-color: #fab005;
+}
+
+.timer__buttons-bottom .pause-button {
+  background-color: #fff;
+}
+
+.start-button:hover,
+.pause-button:hover {
+  transform: scale(110%);
+}
+
+.forward-button,
+.reset-button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  height: 2.8rem;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.forward-button:hover .forward-button__icon,
+.reset-button:hover .reset-button__icon {
+  transform: scale(120%);
+}
+
+.forward-button__icon,
+.reset-button__icon {
+  width: 2.8rem;
+  height: 2.8rem;
+  color: #333;
+
+  transition: all 250ms;
+}
+
+/* SETTINGS */
+
+.section-settings {
+  display: flex;
+
+  flex-direction: column;
+  gap: 1.8rem;
+}
+
+.container-settings {
+  display: flex;
+
+  flex-direction: column;
+  gap: 1.8rem;
+}
+
+.setting-time {
+  display: flex;
+
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.setting-time__title {
+  font-weight: 500;
+}
+
+.setting-time__inputs {
+  display: flex;
+
+  justify-content: space-between;
+}
+
+.setting-time__pomodoro,
+.setting-time__short-break,
+.setting-time__long-break {
+  display: flex;
+
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.setting-time__pomodoro label,
+.setting-time__short-break label,
+.setting-time__long-break label {
+  font-size: 1.6rem;
+}
+
+input[type='number'] {
+  padding: 0.4rem 0.8rem;
+  width: 10rem;
+  color: inherit;
+  font-size: inherit;
+  font-family: inherit;
+  border: none;
+  border-radius: 4px;
+  background-color: #fff;
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.07);
+}
+
+.disabled {
+  opacity: 70%;
+}
+
+/* TASKS */
+
+/* .section-tasks {
+  display: flex;
+
+  flex-direction: column;
+  gap: 1.8rem;
+}
+
+.tasks-title {
+  font-size: 2.4rem;
+  font-weight: 500;
+}
+
+.tasks-content {
+  display: flex;
+
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+.tasks__button-add {
+  padding-top: 1.6rem;
+  padding-bottom: 1.6rem;
+  font-size: 1.8rem;
+  color: #333;
+  background-color: #fff3bf;
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.07);
+
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+  gap: 1.2rem;
+
+  transition: all 250ms;
+}
+
+.tasks__button-add:hover {
+  transform: scale(105%);
+}
+
+.button-add__icon {
+  width: 2.4rem;
+  height: 2.4rem;
+}
+
+.tasks__list {
+  opacity: 1;
+  pointer-events: auto;
+  visibility: visible;
+
+  display: flex;
+
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+.hidden-list {
+  display: none;
+}
+
+.tasks__task {
+  padding: 1.8rem 2.4rem;
+  border-radius: 6px;
+  background-color: #fff3bf;
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.07);
+
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+}
+
+.task__left {
+  display: flex;
+
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1.8rem;
+}
+
+.task__check-icon,
+.task__delete-icon {
+  width: 2.4rem;
+  height: 2.4rem;
+  cursor: pointer;
+
+  transition: all 250ms;
+}
+
+.task__edit-icon {
+  width: 1.8rem;
+  height: 1.8rem;
+  cursor: pointer;
+
+  transition: all 250ms;
+}
+
+.task__check-icon:hover,
+.task__delete-icon:hover,
+.task__edit-icon:hover {
+  transform: scale(120%);
+}
+
+.task__text {
+  line-height: 1;
+}
+
+.task__right {
+  display: flex;
+
+  justify-content: flex-end;
+  align-items: center;
+  gap: 2.4rem;
+}
+
+.task__pomodoros {
+  padding-right: 1.2rem;
+  line-height: 1;
+} */

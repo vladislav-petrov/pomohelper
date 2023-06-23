@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Pomohelper</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+    <script type="module" src="/js/controller.js"></script>
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="container-header">
+        <h1 class="header__title">Pomohelper</h1>
+      </div>
+    </header>
+
+    <main class="main">
+      <div class="container-main">
+        <section class="section-timer">
+          <h2 class="section-title">Timer</h2>
+
+          <div class="section-content timer-content">
+            <div class="timer__buttons-top">
+              <button class="button pomodoro-button active-top">
+                Pomodoro
+              </button>
+
+              <button class="button short-break-button">Short Break</button>
+              <button class="button long-break-button">Long Break</button>
+            </div>
+
+            <div class="timer__description">
+              <p class="description__number"></p>
+              <p class="description__text"></p>
+            </div>
+
+            <div class="timer__time">
+              <span class="time"></span>
+            </div>
+
+            <div class="timer__buttons-bottom">
+              <button class="reset-button">
+                <ion-icon
+                  class="reset-button__icon"
+                  name="refresh-outline"
+                ></ion-icon>
+              </button>
+
+              <button id="button-control" class="button"></button>
+
+              <button class="forward-button hidden">
+                <ion-icon
+                  class="forward-button__icon"
+                  name="play-skip-forward-outline"
+                ></ion-icon>
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <section class="section-settings">
+          <h2 class="section-title">Settings</h2>
+
+          <div class="section-content">
+            <div class="setting-time">
+              <h4 class="setting-time__title">Time (Minutes)</h4>
+
+              <div class="setting-time__inputs">
+                <div class="setting-time__pomodoro">
+                  <label for="time-pomodoro">Pomodoro</label>
+                  <input id="time-pomodoro" type="number" min="1" step="1" />
+                </div>
+
+                <div class="setting-time__short-break">
+                  <label for="time-short-break">Short Break</label>
+                  <input id="time-short-break" type="number" min="1" step="1" />
+                </div>
+
+                <div class="setting-time__long-break">
+                  <label for="time-long-break">Long Break</label>
+                  <input id="time-long-break" type="number" min="1" step="1" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- <section class="section-tasks">
+          <h2 class="tasks-title">Tasks</h2>
+
+          <div class="tasks-content">
+            <ul class="tasks__list">
+              <li class="tasks__task">
+                <div class="task__left">
+                  <ion-icon
+                    class="task__check-icon"
+                    name="checkmark-outline"
+                  ></ion-icon>
+
+                  <p class="task__text">Task 01</p>
+                </div>
+
+                <div class="task__right">
+                  <p class="task__pomodoros">0/2</p>
+
+                  <ion-icon
+                    class="task__edit-icon"
+                    name="pencil-outline"
+                  ></ion-icon>
+
+                  <ion-icon
+                    class="task__delete-icon"
+                    name="close-outline"
+                  ></ion-icon>
+                </div>
+              </li>
+            </ul>
+
+            <button class="tasks__button-add button">
+              <ion-icon class="button-add__icon" name="add-outline"></ion-icon>
+              <p class="button-add__text">Add Task</p>
+            </button>
+          </div>
+        </section> -->
+      </div>
+    </main>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>
